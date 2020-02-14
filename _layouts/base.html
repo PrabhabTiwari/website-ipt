@@ -1,0 +1,45 @@
+---
+description: >
+  This layout can be used for any page requring access to the full width of the page, unconstrained by a grid.
+---
+
+<!DOCTYPE html>
+<html id="Home"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="{{ '/assets/css/screen.css' | prepend: site.baseurl }}">
+<meta name="author" content="Indra Prasad Tiwari">
+<link rel="canonical" href="https://www.indratiwari.com.np/">
+<link rel="alternate" type="application/rss+xml" title="RSS Feed for Indra Prasad Tiwari" href="https://indratiwari.com.np/feed.xml">
+<link rel="stylesheet" href="{{ '/assets/css/screen.css' | prepend: site.baseurl }}" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Prata&display=swap" rel="stylesheet">
+<script type="text/javascript" async="" src=""></script><script async="" src=""></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', '');
+  </script>
+
+<title>Indra Prasad Tiwari · Home</title>
+<meta name="title" content="Indra Prasad Tiwari · Home">
+<meta name="description" content="Indra Prasad Tiwari’s Personal Website">
+<meta name="author" content="Indra Prasad Tiwari">
+<link rel="canonical" href="https://www.indratiwari.com.np/">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.indratiwari.com.np/">
+<meta property="og:title" content="Indra Prasad Tiwari · Home">
+<meta property="og:description" content="Indra Prasad Tiwari’s Personal Website">
+<meta property="og:image" content="https://indratiwari.com.np/assets/img/indratiwari.png">
+</head>
+<body>
+    {% include header.html %}
+    {{ content }}
+	{% include footer.html %}
+  </body>
+</html>

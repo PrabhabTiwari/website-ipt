@@ -1,0 +1,737 @@
+:root {
+	--max-width: 36rem;
+	--sans: 'Lato', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+	--serif: 'Charter', Georgia, serif;
+	--font-small: 0.8rem;
+	--font-med: 0.9rem;
+	--text-color: rgba(0, 0, 0, 0.77);
+	--mid-gray: rgba(0, 0, 0, 0.5);
+	--ltext-gray: rgba(0, 0, 0, 0.5);
+	--light-gray: rgba(0, 0, 0, 0.2)
+}
+
+* {
+	box-sizing: border-box;
+	-webkit-font-smoothing: antialiased;
+	-moz-font-smoothing: greyscale;
+	font-feature-settings: 'ss02'
+}
+
+html {
+	font-size: 18px
+}
+
+@media (min-width: 800px) {
+	html {
+		font-size: 20px
+	}
+}
+
+body {
+	margin: 0;
+	padding: 0 1rem;
+	font-family: var(--sans);
+	color: var(--text-color);
+	line-height: 1.4
+}
+
+div.redesign {
+	background-color: bisque;
+	margin: 0 -1rem;
+	padding: 0.25rem 0.5rem;
+	text-align: center;
+	position: sticky;
+	top: 0;
+	z-index: 999;
+	font-size: var(--font-small)
+}
+
+div.redesign a {
+	color: #000
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul,
+blockquote,
+hr,
+time,
+footer,
+.limit {
+	max-width: var(--max-width);
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	font-feature-settings: "onum", "ss02"
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: bold
+}
+
+a {
+	color: var(--text-color);
+	text-decoration-color: var(--light-gray);
+	text-decoration-thickness: 1px
+}
+
+a:hover {
+	color: royalblue;
+	text-decoration-color: royalblue
+}
+
+small {
+	color: var(--mid-gray);
+	font-family: var(--sans)
+}
+
+time {
+	color: var(--mid-gray);
+	font-size: var(--font-med)
+}
+
+body>header a {
+	text-decoration: none
+}
+
+body>header h1 {
+	font-size: 1rem;
+	margin-bottom: 0
+}
+
+body>header ul {
+	list-style: none;
+	padding: 0;
+	margin-top: 0
+}
+
+body>header li {
+	display: inline-block;
+	margin-right: 0.5em
+}
+
+body>header * {
+	font-size: var(--font-med);
+	line-height: 1.4
+}
+
+@media (max-width: 800px) {
+	body>header * {
+		font-size: var(--font-med)
+	}
+}
+
+footer {
+	margin: 2rem auto;
+	font-size: var(--font-small);
+	line-height: 1.6
+}
+
+footer a {
+	display: inline-block;
+	margin-right: 0.5em
+}
+
+main p,
+main ol,
+main ul,
+blockquote {
+	font-family: var(--serif);
+	-webkit-hyphens: auto;
+	hyphens: auto
+}
+
+hr {
+	margin: 2rem auto;
+	max-width: 10rem;
+	border: none;
+	border-top: 1px solid var(--light-gray)
+}
+
+figure {
+	margin: 5rem auto;
+	max-width: calc(10rem + var(--max-width))
+}
+
+figure img {
+	width: 100%
+}
+
+figure figcaption {
+	margin-top: 0.25rem;
+	font-size: var(--font-small);
+	color: var(--mid-gray)
+}
+
+h1 {
+	font-size: 1.7rem;
+	line-height: 1.1
+}
+
+h2 {
+	font-size: 1.15rem;
+	margin-top: 2rem
+}
+
+h3 {
+	font-size: 0.95rem
+}
+
+blockquote {
+	border-left: 1px solid var(--light-gray);
+	font-family: var(--sans);
+	font-size: var(--font-med);
+	color: #666;
+	padding-left: 1.5rem
+}
+
+blockquote p {
+	font-family: var(--sans)
+}
+
+article>header {
+	display: flex;
+	flex-direction: column-reverse;
+	padding-top: 3rem
+}
+
+article>header time {
+	width: 100%;
+	display: block;
+	line-height: 2
+}
+
+article>header h1 {
+	width: 100%;
+	margin-top: 0;
+	margin-bottom: 2.5rem
+}
+
+.postnav {
+	margin: 4rem auto 0;
+	padding: 1rem 0;
+	max-width: var(--max-width);
+	border-top: 1px solid var(--light-gray);
+	border-bottom: 1px solid var(--light-gray);
+	display: flex;
+	justify-content: space-between
+}
+
+.postnav *:nth-child(2) {
+	text-align: right
+}
+
+.postnav * {
+	font-family: var(--sans)
+}
+
+.postnav strong {
+	font-weight: 400
+}
+
+.custom {
+	background-color: #fff;
+	margin-bottom: 2rem;
+	margin-left: -2rem;
+	margin-right: -2rem
+}
+
+.custom .multiply {
+	mix-blend-mode: multiply
+}
+
+.custom hr {
+	border-top: 1px solid rgba(0, 0, 0, 0.15)
+}
+
+.custom .video-wrapper {
+	margin: 4rem auto;
+	max-width: 32rem
+}
+
+.custom .video-responsive {
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	display: block;
+	height: 0;
+	width: 100%;
+	padding-bottom: 56.25%
+}
+
+.custom .video-responsive iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%
+}
+
+.custom p {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 36rem
+}
+
+.custom p.centered {
+	text-align: center
+}
+
+.custom h1 {
+	font-weight: normal;
+	line-height: 1.1;
+	font-size: 2.5em;
+	text-align: center;
+	font-family: "Lato", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif
+}
+
+.custom h1.small {
+	font-size: 1.75em
+}
+
+.custom h1.emph {
+	max-width: 15em;
+	margin: 3rem auto;
+	color: #b99a54;
+	line-height: 1.1
+}
+
+.custom h1.emph:before {
+	content: '';
+	display: block;
+	margin: 0 auto 1em auto;
+	width: 3em;
+	border-top: 2px solid rgba(0, 0, 0, 0.1)
+}
+
+.custom h1.emph:after {
+	content: '';
+	display: block;
+	margin: 1em auto 0 auto;
+	width: 3em;
+	border-top: 2px solid rgba(0, 0, 0, 0.1)
+}
+
+.custom h1.emph.black {
+	color: #555
+}
+
+.custom h1.emph.black span {
+	color: rgba(0, 0, 0, 0.2)
+}
+
+.custom h2 {
+	font-family: "Söhne", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 0.85rem;
+	letter-spacing: 0.1em;
+	margin-bottom: 1.5rem
+}
+
+.custom blockquote {
+	font-style: normal;
+	margin: 2em auto;
+	font-size: 1.2em;
+	max-width: 28em;
+	color: #b99a54;
+	line-height: 1.5
+}
+
+.custom blockquote.centered {
+	text-align: center
+}
+
+.custom pre.code,
+.custom code {
+	background-color: rgba(45, 55, 65, 0.04);
+	color: rgba(45, 55, 65, 0.85);
+	padding: 1rem 2rem;
+	margin: 3rem auto;
+	max-width: 30em;
+	font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+	border-radius: 4px
+}
+
+.custom code {
+	font-size: 14px;
+	padding: 0.25rem 0.5rem;
+	border: 1px solid rgba(45, 55, 65, 0.04)
+}
+
+.custom div.section {
+	padding: 4rem 2rem
+}
+
+.custom div.section.title {
+	background-color: #222;
+	padding: 4rem 1rem
+}
+
+.custom div.section.title img {
+	display: block;
+	width: 100%;
+	max-width: 40rem;
+	margin: 0 auto
+}
+
+.custom div.section.title h1 {
+	margin-left: -9999px;
+	margin-top: -1em
+}
+
+.custom div.section.foreword {
+	background-color: #333;
+	padding: 1rem 2rem;
+	margin-top: 0;
+	text-align: center;
+	font-family: "Söhne", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif
+}
+
+.custom div.section.foreword p {
+	font-size: 85%;
+	color: #fff;
+	font-family: "Söhne", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif
+}
+
+.custom div.section.foreword a {
+	color: #fff
+}
+
+.custom div.section.foreword a:hover {
+	border-bottom: 1px solid #000
+}
+
+.custom div.section.foreword a:active {
+	color: #000
+}
+
+.custom div.section.black {
+	background-color: #222;
+	color: #fff
+}
+
+.custom div.section.realblack {
+	background-color: #000;
+	color: #fff
+}
+
+.custom div.section.fade {
+	background-color: #EBE8E3
+}
+
+.custom div.section.video {
+	background-color: #000;
+	color: #fff;
+	text-align: center
+}
+
+.custom div.section.video iframe {
+	display: block;
+	margin: 0 auto
+}
+
+.custom div.section.rainbowbreak {
+	background: url(/writing/what-screens-want/images/vertgrad.jpg)
+}
+
+.custom div.section.rainbowbreak h1 {
+	color: #fff;
+	font-size: 6em;
+	line-height: 3;
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 0.06em;
+	font-weight: 200;
+	font-family: -apple-system, BlinkMacSystemFont, Söhne, 'Helvetica Neue', Helvetica, Arial, sans-serif
+}
+
+.custom div.footer {
+	background-color: #333;
+	padding: 2em;
+	text-align: center
+}
+
+.custom div.footer p {
+	color: #fff;
+	font-family: "Söhne", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 85%
+}
+
+.custom div.footer a {
+	color: #fff;
+	text-decoration: none;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.5)
+}
+
+.custom div.section.black h1.emph:before,
+.custom div.section.realblack h1.emph:before,
+.custom div.section.video h1.emph:before {
+	border-top: 2px solid rgba(255, 255, 255, 0.2)
+}
+
+.custom div.section.black h1.emph:after,
+.custom div.section.realblack h1.emph:after,
+.custom div.section.video h1.emph:after {
+	border-top: 2px solid rgba(255, 255, 255, 0.2)
+}
+
+.custom div.section.black p a,
+.custom div.section.realblack p a,
+.custom div.section.video p a {
+	color: #fff
+}
+
+.custom div.section.black figcaption,
+.custom div.section.black cite,
+.custom div.section.realblack figcaption,
+.custom div.section.realblack cite,
+.custom div.section.video figcaption,
+.custom div.section.video cite {
+	color: gray
+}
+
+.custom div.section.black hr,
+.custom div.section.realblack hr,
+.custom div.section.video hr {
+	border-top-color: rgba(255, 255, 255, 0.25)
+}
+
+.custom div.section.black img.circleborder,
+.custom div.section.realblack img.circleborder,
+.custom div.section.video img.circleborder {
+	border: 1em solid rgba(255, 255, 255, 0.05)
+}
+
+.custom div.section.black blockquote,
+.custom div.section.realblack blockquote,
+.custom div.section.video blockquote {
+	border-color: rgba(255, 255, 255, 0.25)
+}
+
+.custom figure {
+	margin: 4rem auto;
+	max-width: 40rem
+}
+
+.custom figure figcaption {
+	margin-top: 1rem
+}
+
+.custom figure img {
+	display: block;
+	width: 100%;
+	margin: 0 auto
+}
+
+.custom div.video-wrapper~figcaption {
+	margin-top: -3rem
+}
+
+.custom div.video-responsive+figcaption {
+	margin-top: -2rem
+}
+
+.custom div.fluid-width-video-wrapper {
+	margin: 0 auto
+}
+
+.custom img.full.real {
+	max-width: none
+}
+
+.custom img.limit {
+	max-width: 20rem
+}
+
+.custom img.limitsm {
+	max-width: 12rem
+}
+
+.custom img.limitmed {
+	max-width: 30rem
+}
+
+.custom div.clear {
+	clear: both
+}
+
+.custom .vidframe {
+	max-width: 50rem;
+	margin: 3em auto
+}
+
+.custom .vidframe iframe {
+	border: 1rem solid rgba(255, 255, 255, 0.1)
+}
+
+.custom a.noborder {
+	border: none
+}
+
+.custom img.tinycentered {
+	display: block;
+	margin: 1em auto;
+	width: 80%;
+	max-width: 15em
+}
+
+.custom img.circleborder {
+	border-radius: 70em;
+	padding: 1em;
+	border: 1em solid rgba(0, 0, 0, 0.05);
+	margin-bottom: 3em
+}
+
+.custom div.step {
+	max-width: 27em;
+	margin: 0 auto;
+	text-align: center;
+	margin-bottom: 4em
+}
+
+.custom div.step:after {
+	content: '';
+	display: block;
+	width: 10em;
+	margin: 4em auto;
+	border-bottom: 2px solid rgba(0, 0, 0, 0.1)
+}
+
+.custom div.section.white>div.step:first-child:before {
+	content: '\201c';
+	font-size: 7em;
+	color: rgba(0, 0, 0, 0.1);
+	display: block;
+	line-height: 0.75;
+	margin-bottom: 2rem;
+	font-style: normal
+}
+
+.custom div.section.white>div.step:last-child:after {
+	content: '\201d';
+	font-size: 7em;
+	width: auto;
+	margin: 0;
+	color: rgba(0, 0, 0, 0.1);
+	display: block;
+	line-height: 2;
+	margin-bottom: -1em;
+	font-style: normal;
+	border: none
+}
+
+.custom div.section.strip {
+	overflow-x: hidden
+}
+
+@-webkit-keyframes rotate {
+	from {
+		-webkit-transform: rotate(0deg)
+	}
+	to {
+		-webkit-transform: rotate(360deg)
+	}
+}
+
+.custom img.zoopraximg {
+	-webkit-animation-name: rotate;
+	-webkit-animation-duration: 2.5s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: linear
+}
+
+.custom div.rainbowbreak.somanyhorses {
+	background: url("/writing/what-screens-want/images/horseani.gif") center center
+}
+
+.custom div.section.rainbowbreak.last {
+	min-height: 100vh
+}
+
+.custom div.sm2-360ui {
+	display: block;
+	margin: 25vh auto 0;
+	float: none
+}
+
+.custom img.speaker {
+	display: block;
+	margin: 1em auto 25vh;
+	opacity: 0.2
+}
+
+.custom div.section.sea {
+	padding: 0
+}
+
+.custom div.section.sea img {
+	display: block;
+	width: 100%
+}
+
+.custom div.section.parttitle {
+	color: #fff;
+	text-align: center;
+	padding: 2em 0 3em;
+	font-size: 2em;
+	background-color: #ad9077
+}
+
+.custom div.section.parttitle span {
+	color: rgba(0, 0, 0, 0.4);
+	display: inline-block;
+	padding: 0.25em 0.75em;
+	margin-bottom: 1em;
+	text-transform: uppercase;
+	font-size: 66%
+}
+
+.custom ul.memos {
+	list-style: none;
+	margin: 3em auto;
+	padding: 0;
+	text-align: center
+}
+
+.custom ul.memos strike {
+	color: #aaa
+}
+
+.custom ul.divlist {
+	list-style: none;
+	padding: 0;
+	text-align: center;
+	font-size: 1.75em !important;
+	color: #777;
+	line-height: 1.2
+}
+
+@media (max-width: 45em) {
+	.custom div.section {
+		padding-top: 2em;
+		padding-bottom: 2em
+	}
+	.custom h1.emph {
+		font-size: 1.8em
+	}
+	.custom div.section.title h1 {
+		font-size: 3.5em
+	}
+	.custom div.section.rainbowbreak h1 {
+		font-weight: 200;
+		font-size: 2em
+	}
+}
+

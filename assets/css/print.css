@@ -1,0 +1,21 @@
+@media print {
+	body {
+		color: #000;
+		background-color: #fff;
+		font-size: 13px;
+		max-width: 40em;
+		margin-left: auto;
+		margin-right: auto
+	}
+	a {
+		color: #000
+	}
+	nav ul li {
+		display: none
+	}
+	article.custom p,
+	article.custom blockquote {
+		color: #000!important
+	}
+}
+
