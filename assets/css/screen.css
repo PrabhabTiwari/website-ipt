@@ -35,7 +35,7 @@ body {
 	line-height: 1.4
 }
 
-div.redesign {
+div.tagline {
 	background-color: bisque;
 	margin: 0 -1rem;
 	padding: 0.25rem 0.5rem;
@@ -46,7 +46,7 @@ div.redesign {
 	font-size: var(--font-small)
 }
 
-div.redesign a {
+div.tagline a {
 	color: #000
 }
 
