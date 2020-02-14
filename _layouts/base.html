@@ -12,7 +12,6 @@ description: >
 <link rel="stylesheet" href="{{ '/assets/css/screen.css' | prepend: site.baseurl }}">
 <meta name="author" content="Indra Prasad Tiwari">
 <link rel="canonical" href="https://www.indratiwari.com.np/">
-<link rel="alternate" type="application/rss+xml" title="RSS Feed for Indra Prasad Tiwari" href="https://indratiwari.com.np/feed.xml">
 <link rel="stylesheet" href="{{ '/assets/css/screen.css' | prepend: site.baseurl }}" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Prata&display=swap" rel="stylesheet">
@@ -25,7 +24,11 @@ description: >
     gtag('config', '');
   </script>
 
-<title>Indra Prasad Tiwari · Home</title>
+{% if page.collection == "class" %}
+<title>{{ page.firstname | escape }} {{ page.lastname | escape }} - {{ site.title | escape }}</title>
+{% else %}
+<title>{% if page.title %}{{ page.title | escape }} - {% endif %}{{ site.title | escape }}</title>
+{% endif %}
 <meta name="title" content="Indra Prasad Tiwari · Home">
 <meta name="description" content="Indra Prasad Tiwari’s Personal Website">
 <meta name="author" content="Indra Prasad Tiwari">
