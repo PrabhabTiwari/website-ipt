@@ -15,14 +15,15 @@ description: >
 <link rel="stylesheet" href="{{ '/assets/css/screen.css' | prepend: site.baseurl }}" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Prata&display=swap" rel="stylesheet">
-<script type="text/javascript" async="" src=""></script><script async="" src=""></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-210325190-1"></script>
 <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-    gtag('config', '');
-  </script>
+  gtag('config', 'UA-210325190-1');
+</script>
 
 {% if page.collection == "class" %}
 <title>{{ page.firstname | escape }} {{ page.lastname | escape }} - {{ site.title | escape }}</title>
